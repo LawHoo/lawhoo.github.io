@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prevent browser close tab</title>
+	</head>
+	<body>
+		<h2>Prevent Browser from Closing All Tabs</h2>
+        <p>Leave this tab open in your browser, and it will prevent the browser from closing by displaying an alert message before this tab is closed. This is a helpful way to prevent accidentally closing all tabs by closing a browser window.</p>
+		<p>DISCLAIMER: This page and its features are provided <strong>"AS IS"</strong>. It may not function as intended. Use it at your own risk.</p>
+ 		<script>
+			window.onbeforeunload = function() { return "Are you sure you want to close all browser tabs?"; }
+		</script>
+	</body>
+</html>
