@@ -4,11 +4,19 @@
 		<title>Prevent browser close tab</title>
 	</head>
 	<body>
-		<h2>Prevent Browser from Closing All Tabs</h2>
-        <p>Leave this tab open in your browser, and it will prevent the browser from closing by displaying an alert message before this tab is closed. This is a helpful way to prevent accidentally closing all tabs by closing a browser window.</p>
-		<p>DISCLAIMER: This page and its features are provided <strong>"AS IS"</strong>. It may not function as intended. Use it at your own risk.</p>
  		<script>
 			window.onbeforeunload = function() { return "Are you sure you want to close all browser tabs?"; }
 		</script>
+		<h2>Prevent Browser from Closing All Tabs</h2>
+		<p><strong>Purpose:</strong> This is a simple page that is designed to display a warning when you attempt to close the page. The idea is to leave this tab open in your browser so that your browser will display a warning before you attempt to close a browser window containing multiple tabs. This is a helpful way to prevent accidentally closing all tabs by closing a browser window.</p>
+        <p>Directions:
+			<ol>
+				<li>Click <strong><a href="javascript:void()" alt="click to enable page close warning">here</a></strong> to activate the features of this page. (Nothing will appear to happen when you click the link, but some browsers require you to click somewhere on a page before the page is permitted to display a warning when you attempt to close the page.)</li>
+				<li>Leave this tab open in your browser (and perhaps pin it as the first tab).</li>
+			</ol>
+		</p>
+		<p>DISCLAIMER: This page and its features are provided <strong>"AS IS"</strong> and <strong>"WITH ALL FAULTS"</strong> and may not function as intended or desired. Use it at your own risk. (If you are technically inclined, you are encouraged to view the source code.)</p>
+		<p>Last Updated: 2017-08-29</p>
+
 	</body>
 </html>
