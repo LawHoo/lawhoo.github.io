@@ -4,18 +4,60 @@
 		<title>Prevent browser close tab</title>
 	</head>
 	<body>
- 		<script>
+		<!-- Simple script to display warning when page is closed -->
+		<script>
 			window.onbeforeunload = function() { return "Are you sure you want to close all browser tabs?"; }
 		</script>
+		<!-- CSS Style for Button -->
+		<style>
+			.button {
+				position: relative;
+				background-color: #008CBA;
+				border: none;
+				font-size: 28px;
+				color: #FFFFFF;
+				padding: 20px;
+				width: 250px;
+				text-align: center;
+				-webkit-transition-duration: 0.4s; /* Safari */
+				transition-duration: 0.4s;
+				text-decoration: none;
+				overflow: hidden;
+				cursor: pointer;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+
+			.button:after {
+				content: "";
+				background: #f1f1f1;
+				display: block;
+				position: absolute;
+				padding-top: 300%;
+				padding-left: 350%;
+				margin-left: -20px !important;
+				margin-top: -120%;
+				opacity: 0;
+				transition: all 0.8s
+			}
+
+			.button:active:after {
+				padding: 0;
+				margin: 0;
+				opacity: 1;
+				transition: 0s
+			}
+		</style>
+		<!-- -------------------- -->
 		<h2>Prevent Browser from Closing All Tabs</h2>
-		<p><strong>Purpose:</strong> This is a simple page that is designed to display a warning when you attempt to close the page. The idea is to leave this tab open in your browser so that your browser will display a warning before you attempt to close a browser window containing multiple tabs. This is a helpful way to prevent accidentally closing all tabs by closing a browser window.</p>
-        <p>Directions:
+		<p><a href="#" alt="click to enable page close warning"><button class="button">Click to Activate</button></a></p>
+		<p><strong>PURPOSE:</strong> This is a simple page that is designed to display a warning when you attempt to close the page. The idea is to leave this tab open in your browser so that your browser will display a warning before you attempt to close a browser window containing multiple tabs. This is a helpful way to prevent accidentally closing all tabs by closing a browser window.</p>
+        <p><strong>DIRECTIONS:</strong>
 			<ol>
-				<li>Click <strong><a href="javascript:void()" alt="click to enable page close warning">here</a></strong> to activate the features of this page. (Nothing will appear to happen when you click the link, but some browsers require you to click somewhere on a page before the page is permitted to display a warning when you attempt to close the page.)</li>
+				<li>Click the button above or <em>anywhere</em> on this page to activate the features of this page. (Nothing will appear to happen when you click the button or click elsewhere on this page, but some browsers require you to click somewhere on a page before the page is permitted to display a warning when you attempt to close the page.)<br><br><strong>Note:</strong> If you close your browser while this tab is open and then later open the browser and this page is reloaded (such as if you click the "Remember my open pages" option in your browser, then you will need to click again to re-activate this page.<br><br></li>
 				<li>Leave this tab open in your browser (and perhaps pin it as the first tab).</li>
 			</ol>
 		</p>
-		<p>DISCLAIMER: This page and its features are provided <strong>"AS IS"</strong> and <strong>"WITH ALL FAULTS"</strong> and may not function as intended or desired. Use it at your own risk. (If you are technically inclined, you are encouraged to view the source code.)</p>
+		<p><strong>DISCLAIMER:</strong> This page and its features are provided <strong>"AS IS"</strong> and <strong>"WITH ALL FAULTS"</strong> and may not function as intended or desired. Use it at your own risk. (If you are technically inclined, you are encouraged to view the source code.)</p>
 		<p>Last Updated: 2017-08-29</p>
 
 	</body>
