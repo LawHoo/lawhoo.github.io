@@ -37,6 +37,7 @@
 				margin-left: -20px !important;
 				margin-top: -120%;
 				opacity: 0;
+				background-color: #4CAF50;
 				transition: all 0.8s
 			}
 
@@ -44,12 +45,21 @@
 				padding: 0;
 				margin: 0;
 				opacity: 1;
+				background-color: #4CAF50;
 				transition: 0s
+			}
+			
+			.button:disabled,button[disabled]{
+				color: #e7e7e7;
+				border: none; 
+				opacity: 0.6;
+				background-color: #4CAF50;
+				cursor: not-allowed
 			}
 		</style>
 		<!-- -------------------- -->
 		<h2>Prevent Browser from Closing All Tabs</h2>
-		<p><a href="#" alt="click to enable page close warning"><button class="button">Click to Activate</button></a></p>
+		<p><a href="#" alt="click to enable page close warning"><button class="button" onclick="this.disabled=true" alt="click to enable page close warning">Click to Activate</button></a></p>
 		<p><strong>PURPOSE:</strong> This is a simple page that is designed to display a warning when you attempt to close the page. The idea is to leave this tab open in your browser so that your browser will display a warning before you attempt to close a browser window containing multiple tabs. This is a helpful way to prevent accidentally closing all tabs by closing a browser window.</p>
         <p><strong>DIRECTIONS:</strong>
 			<ol>
