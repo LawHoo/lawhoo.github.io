@@ -2,17 +2,29 @@
 <html>
 	<head>
 		<title>Prevent browser close tab</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" id="dynamic-favicon"/>
 	</head>
 	<body>
 		<!-- Simple script to display warning when page is closed -->
 		<script>
 			window.onbeforeunload = function() { return "Are you sure you want to close all browser tabs?"; }
 		</script>
-        <!-- Simple script to change text of button and disable it after clicking -->
+        <!-- Simple script to change text of button and disable it after clicking and change Favicon -->
         <script>
 			function activate() {
 				document.getElementById("activate-button").innerHTML = "Activated";
 				document.getElementById("activate-button").disabled = true;
+				<!-- Update Favicon -->
+				document.head || (document.head = document.getElementsByTagName('head')[0]);
+				var link = document.createElement('link'),
+				oldLink = document.getElementById('dynamic-favicon');
+				link.id = 'dynamic-favicon';
+				link.rel = 'icon';
+				link.href = 'favicon-activated.ico';
+				if (oldLink) {
+					document.head.removeChild(oldLink);
+				}
+				document.head.appendChild(link);
 			}
 		</script>
 		<!-- CSS Style for Button -->
